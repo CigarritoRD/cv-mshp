@@ -1,0 +1,311 @@
+---
+import Arrow from "../components/Arrow.astro";
+import Layout from "../layouts/Layout.astro";
+import perfil from "../assets/perfil.webp";
+import javascript from "../assets/tecnologias/icons8-javascript.svg";
+import html from "../assets/tecnologias/icons8-html-5.svg";
+import css from "../assets/tecnologias/icons8-css3.svg";
+import react from "../assets/tecnologias/icons8-react-native.svg";
+import mongo from "../assets/tecnologias/icons8-mongodb-96.svg";
+import express from "../assets/tecnologias/icons8-express-js-100.svg";
+import tailwind from "../assets/tecnologias/icons8-tailwind-css.svg";
+import foodapp from "../assets/proyectos/foodapp.webp";
+import moneyMaker from "../assets/proyectos/moneyMaker.webp";
+import easygif from "../assets/proyectos/easygifs.webp";
+import hboclon from "../assets/proyectos/hboclon.webp";
+import admestudiantes from "../assets/proyectos/admin-estudiantes.webp";
+import recipesapp from "../assets/proyectos/recipesapp.webp";
+import CardProyect from "../components/CardProyect.astro";
+import GithubIcon2 from "../components/GithubIcon2.astro";
+import LinkedInIcon from "../components/LinkedInIcon.astro";
+import cv from "../CV/CV-Maycolk-Hernandez.pdf";
+---
+
+<Layout title="Portfolio | Maycolk">
+	<main>
+		<header class="h-20 flex items-center p-4 justify-center shadow-sm">
+			<nav class="flex justify-between items-center w-full max-w-[1200px]">
+				<h3 class="text-4xl cursor-pointer font-bold text-gradient">
+					M. <span class="text-yellow-400">H.</span>
+				</h3>
+				<ul class="flex gap-4 font-medium items-center text-slate-800">
+					<li
+						class="hidden md:block hover:text-slate-400 duration-200 cursor-pointer"
+					>
+						<a download href={cv}> Curriculum Vitae</a>
+					</li>
+					<li
+						class="hidden md:block hover:text-slate-400 duration-200 cursor-pointer"
+					>
+						<a href="#proyectos"> Proyectos</a>
+					</li>
+					<li
+						class="border shadow-sm hover:bg-purple-600 hover:text-slate-100 rounded-lg bg-white duration-200 cursor-pointer"
+					>
+						<a
+							class="tracking-[2px] bg-gradient-to-r from-purple-600 via-purple-500 to-pink-400 rounded-lg text-slate-50 font-bold text-lg inline-block shadow-md py-2 px-6"
+							href="#contacto"
+						>
+							Contáctame</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section
+			class="border flex-col flex lg:flex-row items-center justify-center gap-10 relative overflow-hidden"
+		>
+			<div class="max-w-[600px] p-4 z-20">
+				<div class="animate-fade-up">
+					<h1 class="font-bold text-5xl py-2">
+						Hola! Soy <span class="text-gradient">Maycolk</span>
+					</h1>
+					<p class="text-xl">
+						Desarrollador de aplicaciones web, bajo tecnologias <span
+							class="text-gradient font-bold">JavaScript</span
+						>
+					</p>
+					<p class="py-2">
+						Me centro en la creación de aplicaciones funcionales, accesibles e
+						intuitivas para una excelente experiencia de usuario
+					</p>
+				</div>
+
+				<div class="py-2 flex flex-col lg:flex-row gap-4">
+					<div
+						class="bg-gradient-to-r flex items-center from-purple-700 to-purple-400 p-0.5 rounded-lg hover:shadow-lg transition-all"
+					>
+						<a
+							download
+							href={cv}
+							class="text-center block w-full lg:w-auto animate-fade-right font-medium px-6 bg-white py-4 lg:py-4 rounded-md hover:text-gradient"
+						>
+							Descargar CV</a
+						>
+					</div>
+					<a
+						href="#proyectos"
+						class="w-full border border-slate-300 rounded-lg py-4 lg:w-auto font-medium group flex gap-4 items-center justify-center px-6"
+					>
+						Ver Proyectos
+						<div class="opacity-0 group-hover:animate-fade-right">
+							<Arrow />
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="w-auto relative lg:place-self-end px-4 animate-fade-left">
+				<img
+					class="drop-shadow-[0_20px_20px_rgba(0,0,0,0.40)] w-full h-full max-w-[400px] lg:min-w-[400px] object-fit"
+					src={perfil}
+					alt=""
+				/>
+				<div
+					class="h-[600px] w-[600px] blur-xl bg-purple-500/20 rounded-full absolute -top-60 -right-40 opacity-60 -z-10"
+				>
+				</div>
+				<div
+					class="h-[400px] w-[400px] blur-xl opacity-40 bg-purple-500/20 rounded-full absolute -bottom-80 -left-60 -z-10"
+				>
+				</div>
+			</div>
+		</section>
+		<section
+			class="relative text-center overflow-hidden flex flex-col items-center rounded-md z-20 shadow-sm h-[600px] justify-center"
+		>
+			<div
+				class="absolute inset-0 bg-slate-50/80 backdrop-filter bg-clip-padding backdrop-blur-lg z-10"
+			>
+			</div>
+			<div class="relative">
+				<div
+					class="h-[400px] w-[400px] bg-purple-500/80 rounded-full absolute -top-60 -left-0 -z-10"
+				>
+				</div>
+				<div
+					class="h-[200px] w-[200px] bg-purple-500/60 rounded-full absolute -bottom-40 right-20 -z-10"
+				>
+				</div>
+				<div class="relative z-40">
+					<p
+						class="p-4 text-2xl z-40 animate-fade-up animate-once animate-ease-out font-medium text-slate-600"
+					>
+						He aprendido por mi cuenta nuevas tecnologias y como implementarlas,
+					</p>
+					<p
+						class="text-xl text-slate-600 animate-fade-up animate-once animate-delay-300 animate-ease-out"
+					>
+						Siempre enfocado en hacerlo facil para el usuario.
+					</p>
+
+					<h2
+						class="text-4xl px-4 py-12 animate-fade-up animate-once animate-delay-500 animate-ease-out text-slate-800 font-bold"
+					>
+						Tecnologias que manejo
+					</h2>
+				</div>
+			</div>
+			<div class="flex gap-2 justify-center z-20">
+				<img class="h-20 w-20" src={html} alt="" />
+				<img class="h-20 w-20" src={css} alt="" />
+				<img class="h-20 w-20" src={javascript} alt="" />
+				<img class="h-20 w-20" src={react} alt="" />
+				<img class="h-20 w-20" src={express} alt="" />
+				<img class="h-20 w-20" src={mongo} alt="" />
+				<img class="h-20 w-20" src={tailwind} alt="" />
+			</div>
+		</section>
+		<section class="max-w-[1200px] mx-auto p-4" id="proyectos">
+			<h2 class="text-4xl text-center py-10">Algunos proyectos</h2>
+			<div
+				class="proyects mx-auto grid w-full max-w-screen-2xl gap-4 px-4 md:flex-row items-center justify-center py-8 md:px-0"
+			>
+				<CardProyect
+					img={hboclon}
+					href="https://streaming-clon-hbo.vercel.app/home"
+					github={"https://github.com/CigarritoRD/hbo-clon"}
+				/>
+				<CardProyect
+					img={admestudiantes}
+					href={"https://adm-estudiante.vercel.app/"}
+					github={"https://github.com/CigarritoRD/ADMEstudiante"}
+				/>
+				<CardProyect
+					img={foodapp}
+					href={"https://foodapp-mu.vercel.app/home"}
+					github={"https://github.com/CigarritoRD/foodapp"}
+				/>
+
+				<CardProyect
+					img={easygif}
+					href={"https://easy-gifs-yn32.vercel.app/"}
+					github={"https://github.com/CigarritoRD/EasyGifs"}
+				/>
+
+				<CardProyect
+					img={moneyMaker}
+					href={"https://moneymaker-chi.vercel.app/"}
+					github={"https://github.com/CigarritoRD/moneymaker"}
+				/>
+				<CardProyect
+					img={recipesapp}
+					href={"https://recipes-app-mu-ochre.vercel.app/"}
+					github={"https://github.com/CigarritoRD/Recipes-app"}
+				/>
+			</div>
+		</section>
+		<section class="max-w-[1200px]mx-auto" id="contacto">
+			<h3 class="text-center font-bold text-4xl py-10 text-gradient">
+				Contactame!
+			</h3>
+			<div class="p-4 max-w-[600px] mx-auto rounded-lg">
+				<form
+					id="form"
+					action="https://formsubmit.co/00362add48f0a6a45510cbb28bb6ea05"
+					method="POST"
+					class="form relative mx-auto flex flex-col gap-6 border-t border-l p-4 rounded-lg"
+				>
+					<div class="formdiv"></div>
+					<label for="nombre" class="font-bold text-lg">
+						Nombre
+						<input
+							required
+							type="text"
+							placeholder="Fulano de tal..."
+							id="nombre"
+							name="nombre"
+							class="shadow-sm block my-2 font-normal p-3 w-full border rounded-lg outline-none"
+						/>
+					</label>
+					<label class="font-bold text-lg" for="mensaje">
+						Mensaje
+						<textarea
+							required
+							class="my-2 w-full p-4 font-normal outline-none rounded-lg border"
+							name="mensaje"
+							id="mensaje"
+							cols="10"
+							placeholder="escriba aqui su mensaje..."
+							rows="10"></textarea>
+					</label>
+					<div class="">
+						<button
+							class="auto p-4 text-lg font-bold bg-gradient-to-r rounded-lg from-purple-600 via-purple-300 to-purple-50 shadow-md w-full"
+							>Enviar</button
+						>
+					</div>
+					<div class="border-b p-2 flex justify-between gap-2">
+						<p class="text-xl font-bold text-slate-500">
+							Contactame a travez de las siguientes redes
+
+							<div
+								class="h-[600px] w-[600px] blur-xl bg-purple-500/20 rounded-full absolute -top-60 -right-40 opacity-60 -z-10"
+							>
+							</div>
+							<div
+								class="h-[200px] w-[400px] blur-xl opacity-40 bg-purple-500/20 rounded-full absolute -bottom-40 -left-60 -z-10"
+							>
+							</div>
+						</p>
+						<div class="flex gap-2">
+							<a
+								href="https://github.com/CigarritoRD"
+								class="shadow-md cursor-pointer"
+							>
+								<GithubIcon2 />
+							</a>
+							<a
+								href="https://www.linkedin.com/in/maycolk-hernandez/"
+								class="shadow-md cursor-pointer"
+							>
+								<LinkedInIcon />
+							</a>
+						</div>
+					</div>
+
+					<style>
+						.proyects {
+							grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+						}
+						.text-gradient {
+							background-image: var(--accent-gradient);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+							background-size: 400%;
+							background-position: 0%;
+						}
+						.instructions {
+							line-height: 1.6;
+							margin: 1rem 0;
+							border: 1px solid rgba(var(--accent), 25%);
+							background-color: white;
+							padding: 1rem;
+							border-radius: 0.4rem;
+						}
+						.instructions code {
+							font-size: 0.875em;
+							font-weight: bold;
+							background: rgba(var(--accent), 12%);
+							color: rgb(var(--accent));
+							border-radius: 4px;
+							padding: 0.3em 0.45em;
+						}
+						.instructions strong {
+							color: rgb(var(--accent));
+						}
+						.link-card-grid {
+							display: grid;
+							grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+							gap: 1rem;
+							padding: 0;
+						}
+
+						.card-wrapper {
+							grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+						}
+					</style>
+				</form>
+			</div>
+		</section>
+	</main>
+</Layout>
